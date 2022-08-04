@@ -119,8 +119,8 @@ class ImportBaseView(ModelAdminView):
             return ImportMixin(ImportExportMixinBase).get_tmp_storage_class()
 
 
-def get_resource_kwargs(self, request, *args, **kwargs):
-        return {}
+    def get_resource_kwargs(self, request, *args, **kwargs):
+            return {}
 
     def get_import_resource_kwargs(self, request, *args, **kwargs):
         return self.get_resource_kwargs(request, *args, **kwargs)
